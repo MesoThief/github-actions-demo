@@ -16,5 +16,6 @@ jobs:
     needs: greet
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Goodbye from ${{ secrets.MY_SECRET }}!"
+      - run: echo "Goodbye from ${COURSE}!"
       - run: ls -al
+      - run: echo "The secret is: ${{ secrets.MY_SECRET }}"
